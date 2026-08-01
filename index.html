@@ -1,117 +1,126 @@
+// app/page.jsx
 
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GACHBORD</title>
+export default function Home() {
+  return (
+    <main dir="rtl" className="min-h-screen bg-gray-100 p-6">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+      {/* Header */}
+      <header className="bg-white rounded-2xl p-6 shadow">
+        <h1 className="text-4xl font-bold">
+          GachBoard
+        </h1>
+
+        <h2 className="text-xl mt-2">
+          گچ بورد مجتبی - مریوان
+        </h2>
+
+        <p className="text-gray-600 mt-2">
+          بورس آنلاین قیمت گچ و دستمزد گچکاری ایران
+        </p>
+      </header>
+
+
+      {/* قیمت لحظه ای */}
+      <section className="grid md:grid-cols-3 gap-5 mt-6">
+
+        <div className="bg-white rounded-2xl p-5 shadow">
+          <h3>دستمزد گچکاری ساده</h3>
+
+          <p className="text-3xl text-green-600 font-bold">
+            450,000 تومان
+          </p>
+
+          <span>
+            ▲ +3.2٪ امروز
+          </span>
+        </div>
+
+
+        <div className="bg-white rounded-2xl p-5 shadow">
+          <h3>بالاترین قیمت امروز</h3>
+          <b>470,000 تومان</b>
+        </div>
+
+
+        <div className="bg-white rounded-2xl p-5 shadow">
+          <h3>پایین‌ترین قیمت امروز</h3>
+          <b>430,000 تومان</b>
+        </div>
+
+      </section>
+
+
+      {/* نمودار */}
+      <section className="bg-white rounded-2xl p-6 mt-6 shadow">
+
+        <h2 className="text-2xl font-bold">
+          نمودار حرفه‌ای قیمت گچکاری
+        </h2>
+
+        <div className="h-60 flex items-center justify-center">
+          📈
+          <br/>
+          نمودار کندلی سبز و قرمز
+          <br/>
+          حجم معاملات - خط روند - هشدار قیمت
+        </div>
+
+      </section>
+
+
+      {/* پروفایل */}
+      <section className="bg-white rounded-2xl p-6 mt-6 shadow">
+
+        <h2 className="text-2xl font-bold">
+          🏆 گچ بورد مجتبی - مریوان
+        </h2>
+
+        <p>
+          بالاترین ارزش کاری و کیفیت اجرا
+        </p>
+
+        <p>
+          امتیاز: ⭐⭐⭐⭐⭐
+        </p>
+
+        <p>
+          وضعیت: استادکار ممتاز
+        </p>
+
+      </section>
+
+
+      {/* رقابت */}
+      <section className="bg-white rounded-2xl p-6 mt-6 shadow">
+
+        <h2 className="text-xl font-bold">
+          رقابت قیمت استادکاران
+        </h2>
+
+        <ul className="mt-4 space-y-3">
+
+          <li>
+            استاد احمدی - 450 هزار تومان
+          </li>
+
+          <li>
+            استاد رضایی - 430 هزار تومان
+          </li>
+
+          <li>
+            استاد محمدی - 470 هزار تومان
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <button className="mt-6 bg-blue-600 text-white px-8 py-3 rounded-xl">
+        ثبت پروژه جدید
+      </button>
+
+
+    </main>
+  );
 }
-
-body{
-font-family:tahoma;
-background:#f4f8fc;
-color:#222;
-}
-
-header{
-background:linear-gradient(135deg,#4facfe,#00c6ff);
-padding:60px 20px;
-text-align:center;
-color:white;
-}
-
-header h1{
-font-size:48px;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
-}
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:white;
-border-radius:20px;
-padding:30px;
-margin-top:-40px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-text-align:center;
-}
-
-.card h2{
-margin-bottom:15px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#00a8ff;
-color:white;
-text-decoration:none;
-border-radius:10px;
-}
-
-.services{
-margin-top:40px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-}
-
-.service{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-text-align:center;
-}
-
-footer{
-margin-top:50px;
-padding:25px;
-text-align:center;
-background:white;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>GACHBORD</h1>
-<p>پلتفرم گچکاران ایران</p>
-</header>
-
-<div class="container">
-
-<div class="card">
-<h2>مجتبی - مریوان</h2>
-<p>25 سال سابقه کاری</p>
-<p>گچ و خاک، سفیدکاری، طرح و ابزار، انواع شبکه</p>
-<a class="btn" href="#">تماس با مجتبی</a>
-</div>
-
-<div class="services">
-<div class="service">گچ و خاک</div>
-<div class="service">سفیدکاری</div>
-<div class="service">طرح و ابزار</div>
-<div class="service">انواع شبکه</div>
-</div>
-
-</div>
-
-<footer>
-GACH
