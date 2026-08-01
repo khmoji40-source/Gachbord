@@ -1,0 +1,34 @@
+create table plasterers (
+  id uuid primary key default gen_random_uuid(),
+  full_name text not null,
+  phone text unique not null,
+  city text not null,
+  experience_years int default 0,
+  rating numeric default 5,
+  created_at timestamp default now()
+);
+
+create table projects (
+  id uuid primary key default gen_random_uuid(),
+  title text not null,
+  city text not null,
+  area_m2 integer,
+  description text,
+  created_at timestamp default now()
+);
+
+create table bids (
+  id uuid primary key default gen_random_uuid(),
+  project_id uuid references projects(id),
+  plasterer_id uuid references plasterers(id),
+  price_per_meter bigint not null,
+  created_at timestamp default now()
+);
+
+create table live_prices (
+  id uuid primary key default gen_random_uuid(),
+  service_name text not null,
+  price bigint not null,
+  city text,
+  created_at timestamp default now()
+);
